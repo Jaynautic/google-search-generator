@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Search Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="canvas" width="752" height="458"></canvas>
+    <div id="inputContainer">
+      <div class="smallContainer">
+        <div class="smallTitle">Search</div>
+        <input id="inputSearch">
+      </div>
+      <div class="smallContainer">
+        <div class="smallTitle">Result</div>
+        <input id="inputResult">
+      </div>
+    </div>
+    <div style="display:none;">
+      <img id="googleBlank" src="googleBlank.png">
+    </div>
+    <button id="go" onclick="createImage()">Create</button>
+    <button id="go" onclick="saveImage()">Save</button>
+    <script src="index.js"></script>
+  </body>
+</html>

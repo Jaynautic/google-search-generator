@@ -10,22 +10,25 @@
   </head>
   <body>
     <canvas id="canvas" width="752" height="458"></canvas>
-    <div id="inputContainer">
-      <div class="smallContainer">
-        <div class="smallTitle">Search</div>
-        <textarea id="inputSearch" name="text" rows="1" cols="30" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
+    <div id="genContainer">
+      <div id="mainTitle">Google Search Generator</div>
+      <div id="inputContainer">
+        <div class="smallContainer">
+          <div class="smallTitle">Search</div>
+          <textarea id="inputSearch" name="text" rows="1" cols="30" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
+        </div>
+        <div class="smallContainer">
+          <div class="smallTitle">Result</div>
+          <textarea id="inputResult" name="text" rows="8" cols="40" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
+        </div>
       </div>
-      <div class="smallContainer">
-        <div class="smallTitle">Result</div>
-        <textarea id="inputResult" name="text" rows="8" cols="40" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
+      <div style="display:none;">
+        <img id="googleBlank" src="googleBlank.png">
       </div>
-    </div>
-    <div style="display:none;">
-      <img id="googleBlank" src="googleBlank.png">
-    </div>
-    <div id="buttonContainer">
-      <button id="go" onclick="createImage()">Create</button>
-      <button id="go" onclick="saveImage()">Save</button>
+      <div id="buttonContainer">
+        <button id="go" onclick="createImage()">Create</button>
+        <button id="go" onclick="saveImage()">Save</button>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>

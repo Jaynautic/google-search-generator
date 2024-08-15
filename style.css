@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Inter';
 }
 
 body {
@@ -26,9 +27,11 @@ button {
     height: 20px;
 }
 
-input {
+textarea {
     margin: auto;
-    width: 100px;
+    /* width: 200px;
+    height: 100px; */
+    padding: 10px;
 }
 
 #inputContainer {
@@ -41,4 +44,10 @@ input {
     margin: auto;
     width: 752px;
     height: 468px;
+}
+
+#buttonContainer {
+    display: flex;
+    margin: auto;
+    gap: 20px;
 }

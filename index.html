@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google Search Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -12,18 +13,20 @@
     <div id="inputContainer">
       <div class="smallContainer">
         <div class="smallTitle">Search</div>
-        <input id="inputSearch">
+        <textarea id="inputSearch" name="text" rows="1" cols="30" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
       </div>
       <div class="smallContainer">
         <div class="smallTitle">Result</div>
-        <input id="inputResult">
+        <textarea id="inputResult" name="text" rows="8" cols="40" wrap="soft" style="overflow:hidden; resize:none;"></textarea>
       </div>
     </div>
     <div style="display:none;">
       <img id="googleBlank" src="googleBlank.png">
     </div>
-    <button id="go" onclick="createImage()">Create</button>
-    <button id="go" onclick="saveImage()">Save</button>
+    <div id="buttonContainer">
+      <button id="go" onclick="createImage()">Create</button>
+      <button id="go" onclick="saveImage()">Save</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

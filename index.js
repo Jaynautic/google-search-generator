@@ -2,6 +2,17 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const genImage = document.getElementById("googleBlank");
 
+
+window.onload = (event) => {
+  document.getElementById("inputSearch").value = "how to use the Google Search Generator?";
+  document.getElementById("inputResult").value = "Type your fake search and result, then click create!";
+
+  createImage();
+
+  document.getElementById("inputSearch").value = "";
+  document.getElementById("inputResult").value = "";
+};
+
 function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
     var words = text.split(' ');
     var line = '';

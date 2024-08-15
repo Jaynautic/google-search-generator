@@ -7,24 +7,36 @@
 
 body {
     display: flex;
-    margin: auto;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 100px;
-    gap: 20px;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    gap: 60px;
 }
 
-.main {
-    margin: auto;
-    width: 400px;
-    text-align: center;
+#genContainer {
+    display: flex;
+    /* margin: auto; */
+    flex-direction: column;
+    gap: 20px;
 }
 
 button {
     margin: auto;
-    width: 100px;
-    height: 20px;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, black, #444444);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-image: linear-gradient(to bottom right, #111111, #555555);
+    scale: 1.03;
 }
 
 textarea {
@@ -37,11 +49,12 @@ textarea {
 #inputContainer {
     display: flex;
     margin: auto;
+    flex-direction: column;
     gap: 10px;
 }
 
 #canvas {
-    margin: auto;
+    /* margin: auto; */
     width: 752px;
     height: 468px;
 }
@@ -49,5 +62,11 @@ textarea {
 #buttonContainer {
     display: flex;
     margin: auto;
+    padding: 10px;
     gap: 20px;
+}
+
+#mainTitle {
+    font-weight: 600;
+    font-size: 24px;
 }

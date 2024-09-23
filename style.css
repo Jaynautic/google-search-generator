@@ -5,7 +5,30 @@
     font-family: 'Inter';
 }
 
-body {
+@media only screen and (max-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        gap: 60px;
+    }
+}
+
+/* body {
     display: flex;
     flex-direction: row;
     margin-top: 100px;
@@ -13,17 +36,18 @@ body {
     height: 100%;
     justify-content: center;
     gap: 60px;
-}
+} */
 
 #genContainer {
     display: flex;
     /* margin: auto; */
     flex-direction: column;
     gap: 20px;
+    margin: 20px;
 }
 
 button {
-    margin: auto;
+    /* margin: auto; */
     width: 140px;
     height: 40px;
     border: none;
@@ -48,25 +72,27 @@ textarea {
 
 #inputContainer {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     flex-direction: column;
     gap: 10px;
 }
 
 #canvas {
     /* margin: auto; */
-    width: 752px;
-    height: 468px;
+    /* width: 752px;
+    height: 468px; */
+    margin: 20px;
+    max-width: 752px;
 }
 
 #buttonContainer {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     padding: 10px;
     gap: 20px;
 }
 
 #mainTitle {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
 }

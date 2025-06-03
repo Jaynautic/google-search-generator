@@ -70,6 +70,11 @@ textarea {
     padding: 10px;
 }
 
+select, input[type="color"] {
+    margin: auto;
+    padding: 10px;
+}
+
 #inputContainer {
     display: flex;
     /* margin: auto; */

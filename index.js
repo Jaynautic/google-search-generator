@@ -37,6 +37,9 @@ function createImage() {
 
     let search = document.getElementById("inputSearch").value;
     let result = document.getElementById("inputResult").value;
+    let font = document.getElementById("fontSelect").value;
+    let searchColor = document.getElementById("searchColor").value;
+    let resultColor = document.getElementById("resultColor").value;
 
     var maxWidth = 640;
     var lineHeight = 24;
@@ -46,12 +49,13 @@ function createImage() {
 
     ctx.drawImage(genImage, 0, 0);
 
-    ctx.font = "100 16px 'Inter', sans-serif";
-    ctx.fillStyle = "white";
+    ctx.font = `100 16px ${font}`;
+    ctx.fillStyle = searchColor;
     ctx.fillText(`${search}`, 200, 44, 500);
     // ctx.fillText(result, 44, 214, 500);
 
-    ctx.font = "100 18px 'Inter', sans-serif";
+    ctx.font = `100 18px ${font}`;
+    ctx.fillStyle = resultColor;
     wrapText(ctx, text, x, y, maxWidth, lineHeight);
 
     return canvas.toDataURL("image/jpeg");

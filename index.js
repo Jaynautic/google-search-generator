@@ -47,6 +47,8 @@ function createImage() {
     var y = 214;
     var text = result;
 
+    // clear previous render before drawing again
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(genImage, 0, 0);
 
     ctx.font = `100 16px ${font}`;

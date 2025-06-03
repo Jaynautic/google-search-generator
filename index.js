@@ -58,12 +58,17 @@ function createImage() {
 }
 
 function saveImage() {
-    let canvas = document.getElementById('canvas')
-    canvas.toBlob(blob => {
-        let data = window.URL.createObjectURL(blob)
-        let link = document.createElement('a')
-        link.href = data
-        link.download = 'feed.png'
-        link.click()
-      }, 'image/png')
+    // ensure the canvas is up to date with the latest input
+    createImage();
+
+    const canvasElement = document.getElementById('canvas');
+    canvasElement.toBlob(blob => {
+        const data = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = data;
+        link.download = 'feed.png';
+        link.click();
+        // clean up the object url after download
+        window.URL.revokeObjectURL(data);
+      }, 'image/png');
 }
